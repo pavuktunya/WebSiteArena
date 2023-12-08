@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena</title>
+
+    <link rel="stylesheet" defer href="style.css">
+    <script src="site.js" defer></script>
+    <script src="libs/gsap/gsap.min.js"></script>
+    <script src="libs/gsap/ScrollTrigger.min.js"></script>
+    <script src="libs/gsap/ScrollSmoother.min.js"></script>
+</head>
+
+<body>
+<div class="wrapper"> 
+    <div class="content">
+        <div class="main-header">
+            <div class="topnav">
+                <nav>
+                    <ul class="primary">
+                        <li>
+                            <a href="">Home</a>
+                        </li>
+                        <li>
+                            <a href="">Arena</a>
+                            <ul class="sub">
+                                <li><a href="">Download</a></li>
+                                <li><a href="">Login</a></li>
+                                <li><a href="">News</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Community</a>
+                            <ul class="sub">
+                                <li><a href="">News</a></li>
+                                <li><a href="">Discussions</a></li>
+                            </ul>  
+                        </li>
+                        <li>
+                            <a href="">Us</a>
+                            <ul class="sub">
+                                <li><a href="">About Us</a></li>
+                                <li><a href="">Support</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                            </ul>  
+                        </li>
+                        <li>
+                            <a href="">Burger</a>
+                            <ul class="sub">
+                                <li><a href="">Cheesy</a></li>
+                                <li><a href="">More Ketchup</a></li>
+                                <li><a href="">Some Mustard</a></li>
+                            </ul>  
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="layers">
+                <div class="layer__header">
+                    <div class="layers__caption">Welcome to the</div>
+                    <div class="layers__title">Arena</div>
+                </div>
+                <div class="layer layers__base" style="background-image: url(assets/back.png);"></div>
+                <div class ="layer layers__front" style="background-image: url(assets/arena18-copy.png);"></div>
+                <div class ="layer layers__front" style="background-image: url(assets/arena18_.png);"></div>
+            </div>
+        </div>
+        
+        <article class="main-article" style="background-image: url(assets/arena8.png);">
+            <div class="main-article__content">
+                <h2 class="main-article__header">Download game</h2>
+                <p class="main-article__paragraph">
+                    It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden base and pursued them across the galaxy.
+                    Evading the dreaded Imperial Starfleet, a group of freedom fighters led by Luke Skywalker has established a new secret base on the remote ice world of Hoth.
+                    The evil lord Darth Vader, obsessed with finding young Skywalker, has dispatched thousands of remote probes into the far reaches of space.
+                </p>
+            </div>
+        </article>
+
+        <article class="main-article slideshow">
+            <!-- Images used to open the lightbox -->
+            <div class="row">
+                <div class="column">
+                    <img src="assets/img1.jpg" style="height: 80%; width: 80%;" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="assets/img2.jpg" style="height: 80%; width: 80%;" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="assets/img3.jpg" style="height: 80%; width: 80%;"  onclick="openModal();currentSlide(3)" class="hover-shadow">
+                </div>
+            </div>
+  
+        <!-- The Modal/Lightbox -->
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+
+                <div class="modal-content">
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 4</div>
+                        <img src="assets/img1.jpg" style="height: 80%; width: 80%;">
+                    </div>
+  
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 4</div>
+                        <img src="assets/img2.jpg" style="height: 80%; width: 80%;">
+                    </div>
+  
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 4</div>
+                        <img src="assets/img3.jpg" style="height: 80%; width: 80%;">
+                    </div>
+  
+                    <!-- Next/previous controls -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+                    <!-- Caption text -->
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+  
+                    <!-- Thumbnail image controls -->
+                    <div class="column">
+                        <img class="demo" src="assets/img1.jpg" style="height: 80%; width: 80%;" onclick="currentSlide(1)" alt="Nature">
+                    </div>
+  
+                    <div class="column">
+                        <img class="demo" src="assets/img2.jpg" style="height: 80%; width: 80%;" onclick="currentSlide(2)" alt="Snow">
+                    </div>
+  
+                    <div class="column">
+                        <img class="demo" src="assets/img3.jpg" style="height: 80%; width: 80%;" onclick="currentSlide(3)" alt="Mountains">
+                    </div>
+                </div>
+            </div>
+        </article>
+        <nav>
+            <ul class="primary navbar-primary">
+                <li>
+                    <a href="">Home</a>
+                </li>
+             </ul>
+        </nav>
+    </div>
+</div>
+</body>
